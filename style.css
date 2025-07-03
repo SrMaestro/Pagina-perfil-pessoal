@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root {
-    --cor-primaria: #3498db;
-    --cor-secundaria: #2ecc71;
-    --cor-fundo: #f5f5f5;
-    --cor-texto: #222;
+    --cor-primaria: #222831;      /* Preto moderno */
+    --cor-secundaria: #393e46;    /* Cinza escuro */
+    --cor-fundo: #f3f4f6;         /* Cinza claro para fundo */
+    --cor-texto: #23272f;         /* Preto/cinza para texto */
+    --cor-destaque: #00adb5;      /* Azul esverdeado para detalhes */
 }
 
 *{
     margin: 0;
     padding: 0;
-
 }
 
 body{
     font-family: 'Montserrat', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+img{
+    width: px;
 }
 
 .container{
@@ -25,10 +31,9 @@ body{
 }
 
 .logo{
-    color: var(--cor-texto);
+    color: var(--cor-primaria);
     text-decoration: none;
-    font-weight: 500;
-    
+    font-weight: 700;
 }
 
 .navegation{
@@ -44,9 +49,15 @@ body{
     color: var(--cor-texto);
     text-decoration: none;
     list-style: none;
-    
+    font-size: medium;
 }
 
+.navegation_item a:hover {
+    color: var(--cor-destaque);
+    background: #e5e7eb;
+    border-radius: 0.3rem;
+    transition: background 0.2s, color 0.2s;
+}
 
 .social-links{
     display: flex;
@@ -55,4 +66,108 @@ body{
 .social-item, a {
     text-decoration: none;
     list-style: none;
+}
+
+.social-item a {
+    color: var(--cor-primaria);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.social-item a:hover {
+    color: var(--cor-destaque);
+}
+
+.home{
+  
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+    margin: 10rem;
+}
+
+.fale_comigo{
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: 2rem;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.fale_comigo:hover {
+    background-color: var(--cor-destaque);
+    color: #fff;
+}
+
+.esfera {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at 35% 35%, #393e46 40%, #222831 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 24px 0 rgba(34,40,49,0.15);
+    animation: flutuar 2.5s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-24px); }
+}
+
+/* Animation */
+
+.planet-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.tech-sphere {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, #393e46 , #222831);
+    border-radius: 50%;
+    box-shadow: 0 0 30px var(--cor-primaria);
+    animation: pulse 2s infinite ;
+}
+
+.tech-ring {
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 160px;
+    height: 160px;
+    border: 2px dashed rgba(0, 173, 181, 0.2);
+    border-radius: 50%;
+    animation: rotate-ring 20s infinite linear;
+}
+
+.tech-ring img {
+    position: absolute;
+    width: 20px;
+    animation: rotate-icons 10s infinite linear reverse;
+}
+
+/* Posicione os ícones manualmente ou via JS */
+.tech-ring img:nth-child(1) { top: -15px; left: 50%; }
+.tech-ring img:nth-child(2) { top: 50%; right: -15px; }
+/* ... */
+
+@keyframes rotate-sphere {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+@keyframes rotate-ring {
+    from { transform: rotateZ(0deg); }
+    to { transform: rotateZ(360deg); }
 }
