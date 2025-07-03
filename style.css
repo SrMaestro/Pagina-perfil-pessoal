@@ -46,3 +46,13 @@ body{
     list-style: none;
     
 }
+
+
+.social-links{
+    display: flex;
+    gap:0.9rem;
+}
+.social-item, a {
+    text-decoration: none;
+    list-style: none;
+}
