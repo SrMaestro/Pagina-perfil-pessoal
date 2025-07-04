@@ -1,65 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Perfil Pessoal</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Perfil Pessoal - DevLuis</title>
 </head>
 
 <body>
-    <header class="container">
-        <a href="#" class="logo"><span>DevLuis</span></a>
-        <nav class="navegation">
+    <header class="flex_container">
+        <a href="#inicio" class="logo" aria-label="Página inicial do DevLuis"><span>DevLuis</span></a>
+
+        <nav class="navegation" aria-label="Seções do site">
             <ul class="navegation_lista">
-                <li class="navegation_item"><a href="#">Sobre mim</a></li>
-                <li class="navegation_item"><a href="#">Projetos</a></li>
-                <li class="navegation_item"><a href="#">Conhecimentos</a></li>
-                <li class="navegation_item"><a href="#">Fale comigo</a></li>
+                <li class="navegation_item"><a href="#sobre">Sobre mim</a></li>
+                <li class="navegation_item"><a href="#projetos">Projetos</a></li>
+                <li class="navegation_item"><a href="#conhecimentos">Conhecimentos</a></li>
+                <li class="navegation_item"><a href="#contato">Fale comigo</a></li>
             </ul>
         </nav>
 
-        <ul class="social-links">
-            <li class="social-item"><a href="#">GitHub</a></li>
-            <li class="social-item"><a href="#">Linkdin</a></li>
-        </ul>
+        <nav class="social-links" aria-label="Redes sociais">
+            <ul class="navegation_lista">
+                <li class="social-item"><a href="https://github.com/" target="_blank"
+                        rel="noopener noreferrer" >GitHub</a></li>
+                <li class="social-item"><a href="https://linkedin.com/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="home">
-        <div class="wrapper">
-            <div>
-                <div>
-                    <h4>Hello world 👋🏾</h4>
-                    <h1>Eu sou DevLuis,</h1>
-                </div>
-                <div>
-                    <p>Desenvolvedor Full Stack.</p>
-                    <a class="fale_comigo"> Fale comigo </a>
-                </div>
-            </div>
-            <div class="planet-container , ">
-                <div class="tech-sphere"></div>
-                <div class="tech-ring">
-                    <!-- Ícones das tecnologias -->
-                    <img src="assets/js.png" alt="React">
-                    <img src="assets/html-5.png" alt="Node">
-                    <img src="assets/css-3.png" alt="Node">
-                    
-                    <!-- Adicione mais ícones -->
+    <main>
+        <section class="home" id="inicio">
+            <div class="wrapper">
+                <div class="flex_container_pit">
+                    <div>
+                        <h4>Hello world 👋🏾</h4>
+                        <h1>Eu sou DevLuis,</h1>
+                        <p>Desenvolvedor Full Stack.</p>
+                    </div>
+                    <div>
+                        <a href="#contato" class="fale_comigo">Fale comigo</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
+        <section class="sobre_min" id="sobre">
+            <img src="assets/java.png" alt="Imagem representativa de DevLuis" class="img_sobre_min" />
+            <p class="sobre_min_paragrafo">
+                Sou apaixonado por tecnologia e busco constantemente evoluir como desenvolvedor. Minha missão é
+                construir
+                soluções que impactem vidas.
+            </p>
+        </section>
+    </main>
 
-        </div>
-        </div>
-    </section>
-
-    <section>
-
-
-    </section>
-
+    <footer class="rodape">
+        © 2025 DevLuis. Todos os direitos reservados.
+    </footer>
 </body>
 
 </html>
