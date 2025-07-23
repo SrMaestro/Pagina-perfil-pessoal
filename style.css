@@ -26,13 +26,26 @@ body {
     font-size: 1.05rem;
 }
 
+.container{
+    padding-inline: 32px ;
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.titulos_section {
+
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 2.2rem 0rem 1rem 0rem;
+}
+
 img {
     width: 100px;
 }
 
 a:focus,
 button:focus {
-    outline: 2px dashed var(--cor-destaque);
     outline-offset: 4px;
 }
 
@@ -44,6 +57,9 @@ button:focus {
     flex-wrap: wrap;
     padding: 1.2rem;
     gap: 2rem;
+    padding-inline: 32px;
+    max-width: 1280px;
+    margin-inline: auto;
 }
 
 .logo {
@@ -62,7 +78,7 @@ button:focus {
 .navegation_item a {
     color: var(--cor-texto);
     text-decoration: none;
-    font-size: medium;
+    font-size: 12px;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -74,7 +90,7 @@ button:focus {
 }
 
 .social-links {
-    
+
     display: flex;
     gap: 0.9rem;
 }
@@ -84,6 +100,7 @@ button:focus {
     color: var(--cor-primaria);
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 12px;
 }
 
 .social-item a:hover {
@@ -92,6 +109,8 @@ button:focus {
 
 /* Home */
 .home {
+    margin-top: 8.2rem;
+    margin-bottom: 8.2rem;
     background-color: var(--cor-fundo);
 }
 
@@ -116,7 +135,7 @@ button:focus {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 12rem;
 }
 
 .fale_comigo {
@@ -141,10 +160,11 @@ button:focus {
 /* Sobre mim */
 .sobre_min {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    gap: 1.2rem;
-    padding: 2rem 0;
+    
+    padding: 2.2rem 0;
+    margin-bottom: 4rem;
 }
 
 .sobre_min_paragrafo {
@@ -186,6 +206,7 @@ button:focus {
 
     .img_sobre_min {
         max-width: 120px;
+        border-radius: 50%;
     }
 
     .sobre_min_paragrafo {
@@ -193,6 +214,75 @@ button:focus {
         font-size: 0.98rem;
     }
 }
+
+/* Projetos */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background-color: #00856F;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-card a:hover {
+    background-color: #006f5c;
+}
+
+
+
+@media (max-width: 700px) {
+    .projects-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem 0.5rem;
+    }
+
+
+}
+
 
 /* Rodapé */
 .rodape {
