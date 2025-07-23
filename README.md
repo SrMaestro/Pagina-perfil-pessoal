@@ -20,6 +20,6 @@ Você pode visualizar o site acessando o link abaixo:
 
  📦 perfil-pessoal
  
-├── index.html
-├── style.css
-└── README.md
+ ├── index.html
+ ├── style.css
+ └── README.md
