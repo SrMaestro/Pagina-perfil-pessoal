@@ -18,7 +18,8 @@ Você pode visualizar o site acessando o link abaixo:
 
 ## 📁 Estrutura do Projeto
 
-## 📦 perfil-pessoal
+ 📦 perfil-pessoal
+ 
 ├── index.html
 ├── style.css
 └── README.md
